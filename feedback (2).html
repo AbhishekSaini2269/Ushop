@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="ulogo.jpg">
+    <title>Ushop/Feedback</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            color: white;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        body {
+            background: url(sn.jpg);
+
+
+        }
+
+        nav {
+            background: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5),
+                0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        nav .logo {
+            float: left;
+            color: black;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 70px;
+            padding-left: 60px;
+        }
+
+        nav ul {
+            float: right;
+            list-style: none;
+            margin-right: 40px;
+            position: relative;
+        }
+
+        nav ul li {
+            float: left;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.8);
+            margin: 0 5px;
+
+        }
+
+        nav ul li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            line-height: 70px;
+            font-size: 18px;
+            padding: 8px 15px;
+        }
+
+        nav ul li a:hover {
+            color: black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #33ffff,
+                0 0 5px #66ffff;
+
+        }
+
+        nav ul ul li a:hover {
+            color: cyan;
+            box-shadow: none;
+        }
+
+        nav ul ul {
+            position: absolute;
+            top: 90px;
+            border-top: 3px solid cyan;
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+        }
+
+        nav ul ul ul {
+            border-top: none;
+        }
+
+        nav ul li:hover>ul {
+            opacity: 1;
+            visibility: visible;
+
+
+        }
+
+        nav ul ul li {
+            position: relative;
+            margin: 0px;
+            width: 150px;
+            float: none;
+            display: list-item;
+            border-bottom: 1px solid rgbe(0, 0, 0, 0.3);
+        }
+
+        nav ul ul ul li {
+            position: relative;
+            top: -70px;
+            left: 150px;
+        }
+
+        .show,
+        .icon,
+        input {
+            display: none;
+        }
+
+        .map {
+            float: right;
+            margin: 80px;
+        }
+
+        main {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            box-sizing: border-box;
+            outline: none;
+            color: rgb(0, 0, 0);
+
+
+        }
+
+
+
+        .body {
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 27%%;
+            background: #000;
+            box-shadow: 0 0 8px rgba(250, 250, 250, 0.6);
+            border-radius: 20px;
+            opacity: 0.9;
+            transform: scale(1.2);
+        }
+
+        .container form {
+            width: 100%;
+            text-align: center;
+            padding: 25px 20px;
+        }
+
+        form h1 {
+            padding: 10px 0;
+        }
+
+        form .id {
+            position: relative;
+        }
+
+        .id i {
+            position: absolute;
+            font-size: 20px;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+
+        form input {
+            width: 100%;
+            height: 50px;
+            margin: 4px 0;
+            border: 1px solid #5c5c5c;
+            border-radius: 3px;
+            background: rgba(0, 0, 0, 0.1);
+            padding: 0 15px;
+            padding-right: 45px;
+            font-size: 20px;
+        }
+
+        form textarea {
+            padding: 5px 15px;
+            border: 1px solid #5c5c5c;
+            border-radius: 3px;
+            background: rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+            width: 100%;
+            margin: 4px 0;
+        }
+
+        form button {
+            margin-top: 5px;
+            border: none;
+            background: linear-gradient(45deg, #164dfe, #fe0450);
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        form button:hover {
+            background: linear-gradient(45deg, #fe0450, #164dfe);
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border: 1px solid #00fff0;
+            color: #00fff0;
+            transition: all 0.3s ease;
+        }
+
+        form input:focus::placeholder,
+        form textarea:focus::placeholder {
+            padding-left: 4px;
+            color: #00fff0;
+            transition: all 0.3s ease;
+        }
+
+        form input:focus+i {
+            color: #00fff0;
+            transition: all 0.3s ease;
+        }
+
+        .thank {
+            text-decoration: none;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+        }
+
+        footer {
+            width: 100%;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            background: #111;
+        }
+
+        footer .content {
+            max-width: 1350px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        footer .content p,
+        a {
+            color: #fff;
+        }
+
+        footer .content .box {
+            width: 33%;
+            transition: all 0.4s ease;
+        }
+
+        footer .content .topic {
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 16px;
+
+        }
+
+        footer .content p {
+            text-align: justify;
+        }
+
+        footer .content .lower .topic {
+            margin: 24px 0 5px 0;
+        }
+
+        footer .content .lower i {
+            padding-right: 16px;
+        }
+
+        footer .content .middle {
+            padding-left: 80px;
+        }
+
+        footer .content .middle a {
+            line-height: 32px;
+        }
+
+        footer .content .right input[type="text"] {
+            height: 45px;
+            width: 100%;
+            outline: none;
+            color: #d9d9d9;
+            background: #000;
+            border-radius: 5px;
+            padding-left: 10px;
+            font-size: 17px;
+            border: 2px solid #222222;
+        }
+
+        footer .content .right input[type="submit"] {
+            height: 42px;
+            width: 100%;
+            font-size: 18px;
+            color: #d9d9d9;
+            background: #eb2f06;
+            outline: none;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 12px;
+            border: 2px solid #eb2f06;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .content .right input[type="submit"]:hover {
+            background: none;
+            color: #eb2f06;
+        }
+
+        footer .content .media-icons a {
+            font-size: 16px;
+            height: 45px;
+            width: 45px;
+            display: inline-block;
+            text-align: center;
+            line-height: 43px;
+            border-radius: 5px;
+            border: 2px solid #222222;
+            margin: 30px 5px 0 0;
+            transition: all 0.3s ease;
+        }
+
+        .content .media-icons a:hover {
+            border-color: #eb2f06;
+        }
+
+        footer .bottom {
+            width: 100%;
+            text-align: right;
+            color: #d9d9d9;
+            padding: 0 40px 5px 0;
+        }
+
+        footer .bottom a {
+            color: #eb2f06;
+        }
+
+        footer a {
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #eb2f06;
+        }
+
+        @media (max-width:1100px) {
+            footer .content .middle {
+                padding-left: 50px;
+            }
+        }
+
+        @media (max-width:950px) {
+            footer .content .box {
+                width: 50%;
+            }
+
+            .content .right {
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width:560px) {
+            footer {
+                position: relative;
+            }
+
+            footer .content .box {
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            footer .content .middle {
+                padding-left: 0;
+            }
+        }
+
+
+
+        @media all and (max-width:968px) {
+            nav ul {
+                margin-right: 0px;
+                float: left;
+            }
+
+            nav .logo {
+                padding-left: 30px;
+                width: 100%;
+            }
+
+            nav ul li,
+            nav ul ul li {
+                display: block;
+                width: 100%;
+            }
+
+            nav ul ul {
+                top: 70px;
+                position: static;
+                border-top: none;
+                float: none;
+                display: none;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            nav ul ul ul li {
+                position: static;
+            }
+
+            nav ul ul li {
+                border-bottom: 0;
+            }
+
+            nav ul ul a {
+                padding-left: 40px;
+            }
+
+            nav ul ul ul a {
+                padding-left: 80px;
+            }
+
+            .show {
+                display: block;
+                color: white;
+                font-size: 18px;
+                padding: 0 20px;
+                line-height: 70px;
+                cursor: pointer;
+            }
+
+            .show:hover {
+                color: cyan;
+
+            }
+
+            .icon {
+                display: block;
+                color: white;
+                position: absolute;
+                right: 40px;
+                line-height: 70px;
+                font-size: 25px;
+                cursor: pointer;
+            }
+
+            nav ul li a:hover {
+                box-shadow: none;
+            }
+
+            .show+a,
+            ul {
+                display: none;
+            }
+
+            [id^=btn]:checked+ul {
+                display: block;
+            }
+
+            .container {
+                width: 50%;
+                background: #000;
+                box-shadow: 0 0 8px rgba(250, 250, 250, 0.6);
+                border-radius: 20px;
+                opacity: 0.9;
+                transform: scale(1.2);
+            }
+
+            .container form {
+                width: 100%;
+                text-align: center;
+                padding: 20px 15px;
+            }
+
+            form h1 {
+                padding: 6px 0;
+                font-size: 20px;
+            }
+
+            form .id {
+                position: relative;
+            }
+
+            .id i {
+                position: absolute;
+                font-size: 18px;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+            }
+
+            form input {
+                width: 100%;
+                height: 40px;
+                margin: 4px 0;
+                border: 1px solid #5c5c5c;
+                border-radius: 3px;
+                background: rgba(0, 0, 0, 0.1);
+                padding: 0 15px;
+                padding-right: 45px;
+                font-size: 18px;
+            }
+
+            form textarea {
+                padding: 5px 15px;
+                border: 1px solid #5c5c5c;
+                border-radius: 3px;
+                background: rgba(0, 0, 0, 0.1);
+                font-size: 12px;
+                width: 100%;
+                margin: 2px 0;
+            }
+
+            form button {
+                margin-top: 5px;
+                border: none;
+                background: linear-gradient(45deg, #164dfe, #fe0450);
+                color: #fff;
+                padding: 4px 0;
+                width: 100%;
+                font-size: 18px;
+                font-weight: 800;
+                letter-spacing: 2px;
+                cursor: pointer;
+                border-radius: 3px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">U shop</div>
+            <label for="btn" class="icon"><span class="fa fa-bars"></span></label>
+            <input type="checkbox" id="btn">
+            <ul>
+                <li><a href="BACKUP-FILE U-SHOP (2).html"><i style="color: black;" class="fas fa-home"></i> Home</a></li>
+                <li>
+                    <label for="btn-1" class="show"><i style="color: black;" class="fas fa-store-alt"></i> Categories <i style="color: black;"
+                            class="fas fa-caret-square-down"></i></label><a href="#"><i style="color: black;" class="fas fa-store-alt"></i>
+                        Categories</a>
+                    <input type="checkbox" id="btn-1">
+                    <ul>
+                        <li><a href="mobilepro.html"><i style="color: black;" class="fas fa-mobile-alt"></i> Mobile </a></li>
+                        <li><a href="medpro.html"><i style="color: black;" class="fas fa-briefcase-medical"></i> Medical </a></li>
+                        <li><a href="acapro.html"><i style="color: black;" class="fab fa-angular"></i> Academies</a></li>
+                        <li><a href="faspro.html"><i style="color: black;" class="fas fa-tshirt"></i> Fashion</a></li>
+                        <li><a href="foodpro.html"><i style="color: black;" class="fas fa-utensils"></i> food</a></li>
+                        <li><label for="btn-2" class="show"><i style="color: black;" class="fas fa-tools"></i> Repair <i style="color: black;"
+                                    class="fas fa-caret-square-right"></i></label>
+                            <a href="#"><i class="fas fa-tools"></i> Repair <i style="color: black;" class="fas fa-caret-square-right"></i></a>
+                            <input type="checkbox" id="btn-2">
+                            <ul>
+                                <li><a href="laptoppro.html"><i style="color: black;" class="fas fa-laptop"></i> Laptop/Pc</a></li>
+                                <li><a href="bookpro.html"><i style="color: black;" class="fas fa-book"></i> Book's </a></li>
+                                <li><a href="elepro.html"><i style="color: black;" class="fas fa-plug"></i> Electrical </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><label for="btn-3" class="show"><i style="color: black;" class="fas fa-cog"></i> Setting <i style="color: black;"
+                            class="fas fa-caret-square-down"></i> </label>
+                    <a href="#"><i style="color: black;" class="fas fa-cog"></i> Setting</a>
+                    <input type="checkbox" id="btn-3">
+                    <ul>
+                        <li><a href="sing in.html"><i style="color: black;" class="fas fa-sign-in-alt"></i> Account</a></li>
+                        <li><a href="feedback (2).html"><i style="color: black;" class="fas fa-file-signature"></i> Feedback</a></li>
+                        <li><a href="BACKUP-FILE U-SHOP (2).html#about-section"><i style="color: black;" class="fas fa-id-badge"></i> About us</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="ucontact.html"><i style="color: black;" class="fas fa-blender-phone"></i> Contact us</a></li>
+    
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="body">
+            <section></section>
+            <div class="container">
+                <form>
+                    <h1>Give your Feedback</h1>
+                    <div class="id">
+                        <input type="text" placeholder="Full name">
+                        <i class="far fa-comment-dots"></i>
+                    </div>
+                    <div class="id">
+                        <input type="email" placeholder="Email address">
+
+                    </div>
+                    <textarea cols="15" rows="5" placeholder="Enter your Feedback here.." required></textarea>
+                    <button type="submit"><a class="thank"
+                            href="https://sequencewiz.org/wp-content/uploads/2015/10/Thank-you-Image.png"
+                            target="_blank">Send</a></button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="content">
+            <div class="left box">
+                <div class="upper">
+                    <div class="topic">About us</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias a ipsa aut eius nobis qui
+                        adipi</p>
+                </div>
+                <div class="lower">
+                    <div class="topic">Contact us</div>
+                    <div class="phone">
+                        <a href="#"><i class="fas fa-phone-volume"></i>7404672269</a>
+                    </div>
+                    <div class="email">
+                        <a href="#"><i class="fas fa-envelope"></i>ushop@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="middle box">
+                <div class="topic">Our Services</div>
+                <div><a href="#">U shop, Search shop near ypu</a></div>
+
+            </div>
+            <div class="right box">
+                <div class="topic">Subscribe us</div>
+                <form action="#">
+                    <input type="text" placeholder="Enter email address">
+                    <input type="submit" name="" value="Send">
+                    <div class="media-icons">
+                        <a href="https://www.facebook.com/ChitkaraU/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/chitkarau/?hl=en" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/ChitkaraU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                            target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/user/ChitkaraU" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://in.linkedin.com/school/chitkara-university/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

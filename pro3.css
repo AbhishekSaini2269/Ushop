@@ -1,0 +1,835 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    background: #f1f1f1;
+}
+
+
+
+
+
+
+
+nav {
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5),
+        0 0 10px rgba(0, 0, 0, 0.5);
+
+
+}
+
+nav:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+nav ul li {
+    float: left;
+    display: inline-block;
+    background: #ffffffe1;
+    margin: 0 5px;
+
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover {
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    box-shadow: 0 0 5px cyan,
+        0 0 5px cyan;
+
+}
+
+nav ul ul li a:hover {
+    color: cyan;
+    box-shadow: none;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid cyan;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+nav ul ul ul {
+    border-top: none;
+}
+
+nav ul li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+
+
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgbe(0, 0, 0, 0.3);
+}
+
+nav ul ul ul li {
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+
+.show,
+.icon,
+input {
+    display: none;
+}
+
+main {
+    color: rgb(0, 0, 0);
+
+
+}
+
+.topleft iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+
+
+}
+
+
+
+
+
+.topleft {
+    position: relative;
+    float: right;
+    top: -80px;
+    right: 100px;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    border: 3px groove black;
+    box-shadow: 0 0 9px rgb(0, 0, 0),
+        0 0 9px cyan;
+
+}
+.topright {
+    background: #f1f1f1;
+    margin-top: 10px;
+    padding: 30px;
+    width: 100%;
+    height: auto;
+
+
+}
+
+
+
+.p1 {
+    text-align: center;
+    margin-top: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    color: silver;
+    border-radius: 20px;
+    box-shadow: 0 0 9px #33ffff,
+        0 0 9px #66ffff;
+
+
+
+}
+
+#about {
+    display: inline-block;
+    font-size: 32px;
+
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
+.checked {
+    color: orange;
+}
+
+.rat {
+    margin-top: 30px;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 30px;
+    font-size: 20px;
+
+}
+
+
+#h1 {
+    display: inline-block;
+    font-size: 60px;
+
+}
+
+
+.testimonials {
+    padding: 40px 0;
+    background: #f1f1f1;
+    color: #434343;
+    text-align: center;
+    font-family: "montserrat", sans-serif;
+}
+
+
+.inner {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.imgcol img {
+    border: 1px groove black;
+}
+
+.border {
+    width: 160px;
+    height: 5px;
+    background: #6ab04c;
+    margin: 26px auto;
+}
+
+.row {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imgrow {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col {
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.imgcol {
+    flex: 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+    padding: 50px;
+
+}
+
+
+.testimonial {
+    background: rgb(0, 0, 0, 0.8);
+    padding: 30px;
+    color: silver;
+    border-radius: 20px;
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.stars {
+    color: orange;
+    margin-bottom: 20px;
+}
+
+
+
+@media screen and (max-width:960px) {
+    .col {
+        flex: 100%;
+        max-width: 80%;
+    }
+
+    .imgcol {
+        flex: 50%;
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .col {
+        flex: 100%;
+        max-width: 80%;
+    }
+
+    .imgcol {
+        flex: 50%;
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background: #111;
+}
+
+footer .content {
+    max-width: 1350px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .content p,
+a {
+    color: #fff;
+}
+
+footer .content .box {
+    width: 33%;
+    transition: all 0.4s ease;
+}
+
+footer .content .topic {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 16px;
+
+}
+
+footer .content p {
+    text-align: justify;
+}
+
+footer .content .lower .topic {
+    margin: 24px 0 5px 0;
+}
+
+footer .content .lower i {
+    padding-right: 16px;
+}
+
+footer .content .middle {
+    padding-left: 80px;
+}
+
+footer .content .middle a {
+    line-height: 32px;
+}
+
+footer .content .right input[type="text"] {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    color: #d9d9d9;
+    background: #000;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 17px;
+    border: 2px solid #222222;
+}
+
+footer .content .right input[type="submit"] {
+    height: 42px;
+    width: 100%;
+    font-size: 18px;
+    color: #d9d9d9;
+    background: #eb2f06;
+    outline: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 12px;
+    border: 2px solid #eb2f06;
+    transition: all 0.3s ease-in-out;
+}
+
+.content .right input[type="submit"]:hover {
+    background: none;
+    color: #eb2f06;
+}
+
+footer .content .media-icons a {
+    font-size: 16px;
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+    text-align: center;
+    line-height: 43px;
+    border-radius: 5px;
+    border: 2px solid #222222;
+    margin: 30px 5px 0 0;
+    transition: all 0.3s ease;
+}
+
+.content .media-icons a:hover {
+    border-color: #eb2f06;
+}
+
+footer .bottom {
+    width: 100%;
+    text-align: right;
+    color: #d9d9d9;
+    padding: 0 40px 5px 0;
+}
+
+footer .bottom a {
+    color: #eb2f06;
+}
+
+footer a {
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #eb2f06;
+}
+
+@media (max-width:1100px) {
+    footer .content .middle {
+        padding-left: 50px;
+    }
+}
+
+@media (max-width:950px) {
+    footer .content .box {
+        width: 50%;
+    }
+
+    .content .right {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:560px) {
+    footer {
+        position: relative;
+    }
+
+    footer .content .box {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    footer .content .middle {
+        padding-left: 0;
+    }
+}
+@media all and (max-width:1025px) {
+    nav ul {
+        margin-right: 0px;
+        float: left;
+    }
+
+    nav .logo {
+        padding-left: 30px;
+        width: 100%;
+    }
+
+    nav ul li,
+    nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul ul {
+        top: 70px;
+        position: static;
+        border-top: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul ul ul li {
+        position: static;
+    }
+
+    nav ul ul li {
+        border-bottom: 0;
+    }
+
+    nav ul ul a {
+        padding-left: 40px;
+    }
+
+    nav ul ul ul a {
+        padding-left: 80px;
+    }
+
+    .show {
+        display: block;
+        color: rgb(0, 0, 0);
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+
+    .show:hover {
+        color: cyan;
+
+    }
+
+    .icon {
+        display: block;
+        color: rgb(0, 0, 0);
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    nav ul li a:hover {
+        box-shadow: none;
+    }
+
+    .show+a,
+    ul {
+        display: none;
+    }
+
+    [id^=btn]:checked+ul {
+        display: block;
+    }
+
+    .topleft iframe {
+        width: 100%;
+        height: 180px;
+        border-radius: 20px;
+
+
+    }
+
+
+
+
+    .topleft {
+        position: relative;
+        top: -60px;
+        align-content: center;
+        width: 300px;
+        height: 180px;
+        border-radius: 20px;
+        border: 3px groove black;
+        box-shadow: 0 0 9px #33ffff,
+            0 0 9px #66ffff;
+
+    }
+
+    #about {
+        display: inline-block;
+        font-size: 32px;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 9px #000000,
+            0 0 9px #000000;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    .slider {
+        width: 100%;
+        height: 300px;
+        background: url(https://www.chaindrugreview.com/app/uploads/2015/05/Medicine-Shoppe-pharmacy-dept_featured.jpg);
+        animation: slide 20s infinite;
+
+    }
+    .topright {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 150px;
+    padding: 30px;
+    width: 96%;
+    height: auto;
+    border-radius: 20px;
+
+}
+
+.detail {
+
+    font-size: 18px;
+}
+
+.detail table {
+    border-radius: 20px;
+    border: 2px solid black;
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 9px #33ffff,
+        0 0 9px #66ffff;
+}
+
+.p1 {
+    margin-top: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    box-shadow: 0 0 9px #33ffff,
+        0 0 9px #66ffff;
+
+
+
+}
+
+
+
+
+
+
+}
+
+@media all and (max-width:460px) {
+#h1 {
+    display: inline-block;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), white, #33ffff4f, rgba(0, 0, 0, 0.2));
+    font-size: 30px;
+    margin-top: 0px;
+    padding: 15px 8px 15px 8px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 20px;
+}
+
+.detail table {
+    border-radius: 20px;
+    border: 2px solid black;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 9px #33ffff,
+        0 0 9px #66ffff;
+}
+
+.topleft iframe {
+    width: 100%;
+    height: 180px;
+    border-radius: 20px;
+
+
+}
+
+
+
+
+.topleft {
+    position: relative;
+    top: -60px;
+    float: right;
+    right: 10%;
+    width: 220px;
+    height: 180px;
+    border-radius: 20px;
+    border: 3px groove black;
+    box-shadow: 0 0 9px #33ffff,
+        0 0 9px #66ffff;
+
+}
+
+#about {
+    display: inline-block;
+    font-size: 26px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 9px #000000,
+        0 0 9px #000000;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+}
+.star-rating form {
+    display: none;
+}
+.star-rating .thanks-msg {
+    display: none;
+    font-size: 20px;
+    margin: 40px auto;
+    color: #4caf50;
+    background-color: rgba(76, 175, 80, 0.1411764705882353);
+    padding: 8px 20px;
+    border-left: 3px solid #4caf50;
+    border-radius: 20px;
+}
+.star-rating input {
+    display: none;
+}
+.star-rating {
+    margin: 20px auto;
+    display: table;
+    width: 350px;
+}
+.star-rating label {
+    padding: 10px;
+    float: right;
+    font-size: 44px;
+    color: #eee;
+}
+.star-rating input:not(:checked) ~ label:hover,
+.star-rating input:not(:checked) ~ label:hover ~ label {
+    color: #ffc107;
+}
+.star-rating input:checked ~ label {
+    color: #ffc107;
+}
+.star-rating form .rating-reaction:before {
+    width: 100%;
+    float: left;
+    color: #ffc107;
+    font-size: 16px;
+}
+.star-rating #rating-1:checked ~ form .rating-reaction:before {
+    content: "Not Good";
+}
+.star-rating #rating-2:checked ~ form .rating-reaction:before {
+    content: "Bad Experiance";
+}
+.star-rating #rating-3:checked ~ form .rating-reaction:before {
+    content: "Average";
+}
+.star-rating #rating-4:checked ~ form .rating-reaction:before {
+    content: "Good experince";
+}
+.star-rating #rating-5:checked ~ form .rating-reaction:before {
+    content: "I love it";
+}
+.star-rating input:checked ~ form {
+    border-top: 1px solid #ddd;
+    width: 100%;
+    padding-top: 15px;
+    margin-top: 15px;
+    display: inline-block;
+}
+.star-rating form .rating-reaction {
+    font-size: 24px;
+    float: left;
+    text-transform: capitalize;
+}
+.star-rating form .submit-rating {
+    border: none;
+    outline: none;
+    background: #594879;
+    color: #ffc107;
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 5px 15px;
+    cursor: pointer;
+    float: right;
+    text-decoration: none;
+}
+form .submit-rating:hover {
+    background-color: #333;
+}
+h5{
+    font-weight: bold;
+    font-size: 40px;
+    color: silver;
+    text-shadow: 5px 5px 1px black;
+}
+.outer{ 
+        width: 90%; 
+        overflow: hidden; 
+        margin: 5%; 
+        text-align: center;
+        /*margin: 20 10 0 20px;  */
+        padding: 20px; 
+        background: #23463f; 
+        border-radius: 15px ; 
+         
+}
+textarea{
+    width: 100%;
+    height: 100px;
+    font-size: 18px;
+    padding: 5px;
+    background-image: url(https://wallpaper-house.com/data/out/9/wallpaper2you_363890.png);
+   
+   
+}
+@media screen and (max-width:600px) {
+    h5{
+        font-size: 24px;
+    }
+    .star-rating {
+    text-align: center;
+    margin: 15px auto;
+    display: table;
+    width: 250px;
+}
+        
+        
+    .star-rating label {
+    padding: 10px;
+    float: right;
+    font-size: 25px;
+    color: #eee;
+}
+}

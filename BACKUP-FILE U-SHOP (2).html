@@ -1,0 +1,1486 @@
+<html>
+
+<head>
+    <link rel="icon" type="image/x-icon" href="ulogo.jpg">
+    <title>U-SHOP Home </title>
+
+
+    <!-- Google Fonts  -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <!-- Font Icons -->
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css"> <!-- Font Icons -->
+
+
+    <!--BOOTSTRAP LIBRARIES-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+    <!--CSS-->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+        .dropbtn {
+  background-color: #2e2f30;
+  color: white;
+  padding: 10px;
+  border: none;
+  z-index: 99;
+  position: fixed;
+  margin-left: 1200px;
+  margin-top: 500px;
+  border-radius: 100px;
+}
+
+.dropup {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+}
+
+.dropup-content {
+    text-align: center;
+  display: none;
+  position: fixed;
+  background-color: #141414d0;
+  z-index: 100;
+  margin-left: 1200px;
+  margin-top: 285px;
+  
+}
+
+.dropup-content a {
+  color: silver;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: flex;
+}
+
+
+.dropup:hover .dropup-content {
+
+  height: 210px;
+  width: 45px;
+  display: block;
+  border-radius: 50px;
+}
+
+.dropup:hover .dropbtn {
+  background-color: #0e0d0d;
+}
+
+
+
+
+
+
+
+        nav {
+            background: rgb(0, 0, 0);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5),
+                0 0 10px rgba(0, 0, 0, 0.5);
+
+
+
+        }
+
+        nav:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        nav .ulogo {
+            float: left;
+            color: rgb(255, 255, 255);
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 70px;
+            padding-left: 60px;
+        }
+
+        nav ul {
+            float: right;
+            list-style: none;
+            margin-right: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        nav ul li {
+            float: left;
+            display: inline-block;
+            background: #000000e1;
+            margin: 0 5px;
+
+        }
+
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            line-height: 60px;
+            font-size: 18px;
+            padding: 8px 15px;
+        }
+
+        nav ul li a:hover {
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 0 5px cyan,
+                0 0 5px cyan;
+
+        }
+
+        nav ul ul li a:hover {
+            color: cyan;
+            box-shadow: none;
+        }
+
+        nav ul ul {
+            position: absolute;
+            top: 90px;
+            border-top: 3px solid cyan;
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+        }
+
+        nav ul ul ul {
+            border-top: none;
+        }
+
+        nav ul li:hover>ul {
+            opacity: 1;
+            visibility: visible;
+            z-index: 1;
+
+
+        }
+
+        nav ul ul li {
+            position: relative;
+            margin: 0px;
+            width: 150px;
+            float: none;
+            display: list-item;
+            border-bottom: 1px solid rgbe(0, 0, 0, 0.3);
+        }
+
+        nav ul ul ul li {
+            position: relative;
+            top: -70px;
+            left: 150px;
+        }
+
+        .dekho,
+        .icon,
+        input {
+            display: none;
+        }
+        #address{
+            color: black;
+            background-color: blanchedalmond;
+            display: inline-block;
+        }
+
+        @media all and (max-width:1025px) {
+            nav ul {
+                margin-right: 0px;
+                float: left;
+            }
+
+            nav .logo {
+                padding-left: 30px;
+                width: 100%;
+            }
+
+            nav ul li,
+            nav ul ul li {
+                display: block;
+                width: 100%;
+            }
+
+            nav ul ul {
+                top: 70px;
+                position: static;
+                border-top: none;
+                float: none;
+                display: none;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            nav ul ul ul li {
+                position: static;
+            }
+
+            nav ul ul li {
+                border-bottom: 0;
+            }
+
+            nav ul ul a {
+                padding-left: 40px;
+            }
+
+            nav ul ul ul a {
+                padding-left: 80px;
+            }
+
+            .dekho {
+                display: block;
+                color: rgb(255, 255, 255);
+                font-size: 18px;
+                padding: 0 20px;
+                line-height: 70px;
+                cursor: pointer;
+            }
+
+            .dekho:hover {
+                color: cyan;
+
+            }
+
+            .icon {
+                display: block;
+                color: rgb(255, 255, 255);
+                position: absolute;
+                right: 40px;
+                line-height: 70px;
+                font-size: 25px;
+                cursor: pointer;
+            }
+
+            nav ul li a:hover {
+                box-shadow: none;
+            }
+
+            .dekho+a,
+            ul {
+                display: none;
+            }
+
+            [id^=btn]:checked+ul {
+                display: block;
+            }
+
+            .dekho+a,
+            ul {
+                display: none;
+            }
+
+
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 33.33%;
+            display: none;
+            /* Hide columns by default */
+        }
+
+        /* Clear floats after rows */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Content */
+        .content {
+            background-color: white;
+            padding: 10px;
+        }
+
+        /* The "show" class is added to the filtered elements */
+        .show {
+            display: block;
+        }
+
+        /* Style the buttons */
+        .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        /* Add a grey background color on mouse-over */
+        .btn:hover {
+            background-color: rgb(15, 15, 15);
+        }
+
+        /* Add a dark background color to the active button */
+        .btn.active {
+            background-color: rgb(240, 230, 230);
+            color: rgb(12, 12, 12);
+        }
+
+        /* Skins For U_shop*/
+        a,
+        a:hover,
+        a:focus {
+            color: #f6f9fd;
+        }
+
+
+        /* === Text Carousel === */
+        #text-carousel-intro-section {
+            background-color: #25282a;
+        }
+
+        .carousel-inner img {
+            -webkit-filter: grayscale(90%);
+            filter: grayscale(90%);
+            /* make all photos black and white */
+            width: 100%;
+            /* Set width to 100% */
+            margin: auto;
+        }
+
+        .carousel-caption h3 {
+            color: #fff !important;
+        }
+
+        @media (max-width: 600px) {
+            .carousel-caption {
+                display: none;
+                /* Hide the carousel text when the screen is less than 600 pixels wide */
+            }
+        }
+
+
+
+
+        /* === Rotate Box === */
+        .rotate-box-1.square-icon .rotate-box-icon,
+        .rotate-box-2.square-icon .rotate-box-icon {
+            background-color: #363940;
+        }
+
+        /* === Portfolio === */
+        .active_prot_menu a,
+        .portfolio_menu ul li a:hover {
+            background: #f2f3f5 !important;
+            color: rgb(5, 5, 5) !important;
+        }
+
+        .portfolio_single_content div {
+            background: none repeat scroll 0 0 rgba(54, 57, 64, 0.95);
+        }
+
+
+        .logo {
+            margin-top: 10px;
+            font-size: 35px;
+            color: rgb(253, 247, 247);
+            list-style: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            color: rgb(253, 251, 251);
+            text-decoration: none;
+            text-shadow: #ee5e5e 4px 0px;
+            font-size: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 4px;
+
+        }
+
+
+       
+
+        .containex {
+            text-align: center;
+            position: absolute;
+            margin-bottom: 100px;
+        }
+
+        .containerx span {
+            display: block;
+        }
+
+        .text1 {
+            color: rgb(10, 10, 10);
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            animation: text 3s 1;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .text2 {
+            font-size: 20px;
+            color: #595a58;
+            margin-left: 100px;
+            margin-top: 100x;
+        }
+
+        @keyframes text {
+            0% {
+                color: black;
+                margin-bottom: -40px;
+            }
+
+            30% {
+                letter-spacing: 10px;
+                margin-bottom: -40px;
+            }
+
+            85% {
+                letter-spacing: 8px;
+                margin-bottom: -40px;
+            }
+        }
+
+        .column {
+            padding: 10px;
+        }
+
+
+
+
+        .carousel-inner img {
+            -webkit-filter: grayscale(90%);
+            filter: grayscale(90%);
+            /* make all photos black and white */
+            width: 100%;
+            /* Set width to 100% */
+            margin: auto;
+        }
+
+        .carousel-caption h3 {
+            color: #fff;
+            font-size: 100px;
+            text-shadow: 0 0 6px black;
+        }
+
+
+        footer {
+            background-color: #474749;
+            text-shadow: #d5d5d5;
+            color: #f5f5f5;
+            padding: 30px;
+            list-style: none outside none;
+        }
+
+        footer a {
+            color: #f5f5f5;
+            font-size: 20px;
+            list-style: none;
+        }
+
+        footer a:hover {
+            color: rgb(236, 83, 83);
+            text-decoration: none;
+
+        }
+
+        li,
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        .containe {
+            width: 100%;
+
+        }
+
+        .carousel-caption p {
+            font-size: 30px;
+            color: rgb(249, 253, 249);
+            text-shadow: 0 0 10px rgb(240, 26, 26);
+        }
+
+        .carousel-caption {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /*Main Style For U-Shop*/
+
+
+        body {
+            position: relative;
+            height: 100%;
+            font-size: 14px;
+            color: #363940;
+            width: 100%;
+        }
+
+
+
+
+        /* Begin Fonts */
+        body {
+            font-family: 'Roboto', Helvetica, Arial, sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Roboto', Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        h3 {
+            font-size: 26px;
+        }
+
+        h4 {
+            font-size: 22px;
+        }
+
+        h5 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 16px;
+
+        }
+
+        /* Begin text carousel intro */
+        #text-carousel-intro-section {
+            height: 100%;
+
+        }
+
+        #text-carousel-intro-section .container {
+            height: 100%;
+
+        }
+
+        #text-carousel-intro-section .caption {
+            position: relative;
+            top: 50%;
+            margin-top: -70px;
+        }
+
+        #text-carousel-intro-section .caption h1 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 60px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        #text-carousel-intro-section .caption p {
+            letter-spacing: 2px;
+            font-size: 16px;
+        }
+
+        /* End text carousel intro */
+
+
+
+        /* ===== Begin roatet boxes ===== */
+        /* Begin rotate box-1 */
+        .rotate-box-1,
+        .rotate-box-2 {
+            display: inline-block;
+            margin: 30px 0;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+
+        a.rotate-box-1,
+        a.rotate-box-2 {
+            text-decoration: none;
+            color: #363940;
+        }
+
+        a.rotate-box-1:hover,
+        a.rotate-box-2:hover {
+            color: #676D75;
+        }
+
+        .rotate-box-1 .rotate-box-icon {
+            display: inline-block;
+            text-align: center;
+            margin-bottom: 15px;
+            margin-right: 25px;
+            margin-top: 10px;
+            float: left;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .rotate-box-1.square-icon .rotate-box-icon,
+        .rotate-box-2.square-icon .rotate-box-icon {
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            color: #FFF !important;
+            font-size: 18px;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .rotate-box-1.square-icon .rotate-box-icon:after,
+        .rotate-box-2.square-icon .rotate-box-icon:after {
+            content: "";
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            bottom: 3px;
+            left: 3px;
+            border: 2px solid #FFF;
+        }
+
+        .rotate-box-1:hover.square-icon .rotate-box-icon,
+        .rotate-box-2:hover.square-icon .rotate-box-icon {
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        .rotate-box-1.square-icon .rotate-box-icon .fa,
+        .rotate-box-2.square-icon .rotate-box-icon .fa {
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        .rotate-box-1:hover.square-icon .rotate-box-icon .fa,
+        .rotate-box-2:hover.square-icon .rotate-box-icon .fa {
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        .rotate-box-1 .rotate-box-info a,
+        .rotate-box-2 .rotate-box-info a {
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .rotate-box-1 h4,
+        .rotate-box-2 h4 {
+            font-weight: 400;
+        }
+
+        .rotate-box-1 p {
+            padding: 0 10px;
+        }
+
+        .rotate-box-1 .rotate-box-info {
+            padding-left: 60px;
+        }
+
+        /* End rotate box-1 */
+
+
+        /* Begin rotate box-2 */
+        .rotate-box-2 .rotate-box-icon {
+            display: inline-block;
+            text-align: center;
+            margin-bottom: 15px;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .rotate-box-2.square-icon .rotate-box-icon {
+            width: 75px;
+            height: 75px;
+            line-height: 75px;
+            font-size: 36px;
+        }
+
+        .rotate-box-2.square-icon .rotate-box-info {
+            margin-top: 30px;
+        }
+
+        /* End rotate box-2 */
+        /* ===== End rotate boxes ===== */
+
+
+
+        /* ===== Begin Portfolio===== */
+
+        .portfolio_menu {
+            text-align: center;
+            overflow: hidden;
+            margin-top: 22px;
+            margin-bottom: 48px;
+        }
+
+        .portfolio_menu ul {
+            list-style: none outside none;
+            text-align: center;
+        }
+
+        .portfolio_menu ul li {
+            display: inline-block;
+        }
+
+        .portfolio_menu ul li a {
+            color: #474747;
+            background: transparent;
+            display: inline-block;
+            margin: 4px;
+            padding: 8px 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .portfolio_single_content {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 5;
+            margin-bottom: 30px;
+            overflow: hidden;
+
+        }
+
+        .portfolio_single_content:hover img {
+            -o-transform: scale(2);
+            -webkit-transform: scale(2);
+            -moz-transform: scale(2);
+            -ms-transform: scale(2);
+            transform: scale(2);
+        }
+
+        .portfolio_single_content img {
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 6;
+            cursor: pointer;
+            -moz-transition: all 1s;
+            -webkit-transition: all 1s;
+            -o-transition: all 1s;
+            -ms-transition: all 1s;
+            transition: all 1s;
+        }
+
+        .portfolio_single_content .canv {
+            width: 100%;
+            height: 100%;
+        }
+
+        .portfolio_single_content div+div {
+            background: none repeat scroll 0 0 rgba(255, 255, 255, .9);
+            bottom: -100%;
+            color: #FFC000;
+            font-weight: bold;
+            left: 0;
+            margin: 0;
+            min-height: 90px;
+            padding: 31px 5px 0 10px;
+            position: absolute;
+            width: 100%;
+            z-index: 12;
+            border-top: 0;
+        }
+
+        /*.portfolio_single_content:hover div+div{bottom: 0;}*/
+        .portfolio_single_content div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transform: scale(0);
+            transition: all .6s;
+            opacity: 0;
+        }
+
+        .portfolio_single_content:hover div {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .portfolio_single_content div a {
+            color: #FFFFFF;
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 40%;
+            padding-bottom: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .portfolio_single_content div span {
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+        }
+
+
+
+        .portfolio_content {
+            margin-top: 36px;
+            overflow: hidden;
+        }
+
+        /* ===== End Portfolio===== */
+
+
+        /* ===== Begin social ===== */
+        #social-section {
+            padding: 7px 0;
+        }
+
+        ul.social-list {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        ul.social-list li {
+            display: inline-block;
+            margin-right: 2px;
+        }
+
+        ul.social-list li .rotate-box-1 {
+            margin: 0;
+        }
+
+        ul.social-list li a i {
+            color: #fff;
+            font-size: 20px;
+            margin-right: 4px;
+            margin-top: 10px;
+        }
+
+
+        /* ===== End social ===== */
+
+        /* ====RESPONSIVNESS ==== */
+
+        @media only screen and (max-width : 767px) {
+
+
+           
+
+
+            .page {
+                padding-top: 30px;
+            }
+
+
+            #cta-section,
+            #about-section,
+            #contact-section,
+            #contact-section .contact .form-control {
+                text-align: center;
+            }
+        }
+    </style>
+    <!--CSS ENDS finally!!!-->
+</head>
+
+<body>
+    <div class="dropup">
+        <a class="dropbtn"><i class="fa fa-plus" style="font-size:30px; "></i></a>
+        <div class="dropup-content">
+          <a href="#myCarousel"><i class="fa fa-home" style="font-size:30px; "></i></a>
+          <a href="#about-section"><i class="fa fa-paper-plane-o" style="font-size:30px; "></i></a>
+          <a href="#portfolio-section"><i class="fa fa-database" style="font-size:30px; "></i></a>
+          <a href="#social-section"><i class="fa fa-at" style="font-size:30px; "></i></a>
+        </div>
+      </div>
+    
+    <header>
+        <nav>
+            <div class="ulogo">U shop</div>
+            <label for="btn" class="icon"><span class="fa fa-bars"></span></label>
+            <input type="checkbox" id="btn">
+            <ul>
+                <li><a href="BACKUP-FILE U-SHOP (2).html"><i class="fas fa-home"></i> Home</a></li>
+                <li>
+                    <label for="btn-1" class="dekho"><i class="fas fa-store-alt"></i> Categories <i
+                            class="fas fa-caret-square-down"></i></label><a href="#"><i class="fas fa-store-alt"></i>
+                        Categories</a>
+                    <input type="checkbox" id="btn-1">
+                    <ul>
+                        <li><a href="mobilepro.html"><i class="fas fa-mobile-alt"></i> Mobile </a></li>
+                        <li><a href="medpro.html"><i class="fas fa-briefcase-medical"></i> Medical </a></li>
+                        <li><a href="acapro.html"><i class="fab fa-angular"></i> Academies</a></li>
+                        <li><a href="faspro.html"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                        <li><a href="foodpro.html"><i class="fas fa-utensils"></i> food</a></li>
+                        <li><label for="btn-2" class="dekho"><i class="fas fa-tools"></i> Repair <i
+                                    class="fas fa-caret-square-right"></i></label>
+                            <a href="#"><i class="fas fa-tools"></i> Repair <i
+                                    class="fas fa-caret-square-right"></i></a>
+                            <input type="checkbox" id="btn-2">
+                            <ul>
+                                <li><a href="laptoppro.html"><i class="fas fa-laptop"></i> Laptop/Pc</a></li>
+                                <li><a href="bookpro.html"><i class="fas fa-book"></i> Book's </a></li>
+                                <li><a href="elepro.html"><i class="fas fa-plug"></i> Electrical </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><label for="btn-3" class="dekho"><i class="fas fa-cog"></i> Setting <i
+                            class="fas fa-caret-square-down"></i> </label>
+                    <a href="#"><i class="fas fa-cog"></i> Setting</a>
+                    <input type="checkbox" id="btn-3">
+                    <ul>
+                        <li><a href="sing in.html"><i class="fas fa-sign-in-alt"></i> Account</a></li>
+                        <li><a href="feedback (2).html"><i class="fas fa-file-signature"></i> Feedback</a></li>
+                        <li><a href='BACKUP-FILE U-SHOP (2).html#about-section'><i class="fas fa-id-badge"></i> About us</a></li>
+                    </ul>
+                </li>
+                <li><a href="ucontact.html"><i class="fas fa-blender-phone"></i> Contact us</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="containe">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <img src="a1.jpg" alt="Los Angeles" style="width:100%;">
+                    <div class="carousel-caption">
+                        <div class="slider-text">
+                            <h3>Bienvenue To The World</h3>
+                            <p>Mobiles,Laptops,Shoes,Medicine You Are At The Right Place</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="d.jpg" alt="Chicago" style="width:100%;">
+                    <div class="carousel-caption">
+                        <h3>Just What At Your Looking In ,Just A Click</h3>
+                        <p>We Try To Find Best Deals Near You,To Give You The Best Experience</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="c.jpg" alt="New York" style="width:100%;">
+                    <div class="carousel-caption">
+                        <h3>Still Learning,Always Evolving</h3>
+                        <p>We Try To Learn As Much From You To Continue To Improve,Your Feedback Our Pleasure</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- End text carousel intro section -->
+
+    <!-- Begin about section -->
+    <!-- Begin page header-->
+    <section id="about-section">
+        <div class="page-header-wrapper">
+            <div class="container1">
+                <div class="containerx">
+                    <h2 class="text1" style="margin-left: 500px; margin-top: 200px;">ABOUT US</h2>
+                    <p class="text2 subtitle" style="margin-top: 100px; margin-left: 400px;">A Little About Ourselves,Who We Are,What Do
+                        We Do?</p>
+                </div>
+            </div>
+        </div>
+        <!-- End page header-->
+
+        <!-- Begin rotate box-1 -->
+        <div class="rotate-box-1-wrapper">
+            <div class="container">
+                <div class="col-md-3">
+                    <a href="#" class="rotate-box-1 square-icon wow zoomIn">
+                        <span class="rotate-box-icon">
+                        </span>
+                        <div class="rotate-box-info">
+                            <h4>Who We Are?</h4>
+                            <p>We Are A Group Of Computer Science Students Working On This Site, Studying In
+                                Currently
+                                1st Year,
+                                In Chitkara University.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.2s">
+                        <span class="rotate-box-icon"></i></span>
+                        <div class="rotate-box-info">
+                            <h4>What Is This About?</h4>
+                            <p>This Site Will Cover Some Much Needed Information About The Retailers In You
+                                Locality,To Make Shopping Easier For You.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.4s">
+                        <span class="rotate-box-icon"></span>
+                        <div class="rotate-box-info">
+                            <h4>What Does It Cover?</h4>
+                            <p>From The Latest Fashion To Quick Medical Services,We Try Our Best To Provide
+                                Variety
+                                Of Shops And Services</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.4s">
+                        <span class="rotate-box-icon"></i></span>
+                        <div class="rotate-box-info">
+                            <h4>How To Contact Us?</h4>
+                            <p> To Be A Part Of Our Social Media Groups,All The Necessary Links Are Provided
+                                Below,As
+                                You Complete Your Tour On This Site</p>
+                        </div>
+                    </a>
+                </div>
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+        </div>
+    </section>
+    <!-- End rotate box-1 -->
+
+    <!-- Begin Portfolio -->
+    <section id="portfolio-section" class="page bg-style1">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="portfolio">
+                    <!-- Begin page header-->
+                    <div class="page-header-wrapper">
+                        <div class="container">
+                            <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                                <div class="containerx">
+                                    <h2 class="text1" style="margin-left: 40px; margin-top: 300px;">SERVICES WE OFFER</h2>
+                                    <p class="text2 " style="margin-left: 10px;  margin-top: 100px; display: inline; ">Variety Of
+                                        Categories Included From Mobiles ,Laptops ,Electronics
+                                        To Most Amazing Clothes and Stuff Just At One Click.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End page header-->
+                        <div class="portfoloi_content_area">
+                            <div class="portfolio_menu" id="filters">
+                                <div id="myBtnContainer">
+                                    <ul>
+                                        <li><a class="btn active" onclick="filterSelection('all')"> ALL</a></li>
+                                        <li><a class="btn" onclick="filterSelection('Electronics')">
+                                                ELECTRONICS</a>
+                                        </li>
+                                        <li><a class="btn" onclick="filterSelection('Medical')"> MEDICAL</a></li>
+                                        <li><a class="btn" onclick="filterSelection('Fashion')"> FASHION</a></li>
+                                        <li><a class="btn" onclick="filterSelection('Gyms')"> GYMS</a></li>
+                                        <li><a class="btn" onclick="filterSelection('Academics')">ACADEMICS</a>
+                                        </li>
+                                        <li><a class="btn" onclick="filterSelection('Restaurants')">
+                                                RESTAURANTS</a>
+                                        </li>
+                                        <li><a class="btn" onclick="filterSelection('Furnitures')"> FURNITURES</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="portfolio_content">
+                                    <div class="row" id="portfolio">
+                                       
+                                        <div class="column Fashion"  >
+                                            <div class="portfolio_single_content">
+                                                <img src="clothes.jpg" alt="title" />
+                                                <div>
+                                                    <a href="fashion1.html">Clothing </a>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div></a>
+                                        <div class="column Electronics">
+                                            <div class="portfolio_single_content">
+                                                <img src="electrical.jpg" alt="title" />
+                                                <div>
+                                                    <a href="electronics1.html">Electronics</a>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column Electronics">
+                                            <div class="portfolio_single_content">
+                                                <img src="mobile.jpg" alt="title" />
+                                                <div>
+                                                    <a href="mobile1.html"> Mobile</a>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column Electronics">
+                                            <div class="portfolio_single_content">
+                                                <img src="repair.jpg" alt="title" />
+                                                <div>
+                                                    <a href="lap1.html">Laptop Repair</a>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column Academics">
+                                            <div class="portfolio_single_content">
+                                                <img src="academics.jpg" alt="title" />
+                                                <div>
+                                                    <a href="acadmy1.html">Academics</a>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column Gyms">
+                                            <div class="portfolio_single_content">
+                                                <img src="gym.jpg" alt="title" />
+                                                <div>
+                                                    <a href="#">Gyms</a>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column Medical">
+                                            <div class="portfolio_single_content">
+                                                <img src="doctor.jpg" alt="title" />
+                                                <div>
+                                                    <a href="med1.html">Doctors And Medical Stores</a>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column Furnitures ">
+                                            <div class="portfolio_single_content">
+                                                <img src="furniture.jpg" alt="title" />
+                                                <div>
+                                                    <a href="furniture shop.html">Furnitures</a>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column Restaurants">
+                                            <div class="portfolio_single_content">
+                                                <img src="restaurants.jpg" alt="title" />
+                                                <div>
+                                                    <a href="food1.html">Restaurants And Bakery</a>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column Furnitures">
+                                            <div class="portfolio_single_content">
+                                                <img src="hardware.jpg" alt="title" />
+                                                <div>
+                                                    <a href="electronics1.html">Hardware Stores</a>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column Fashion">
+                                            <div class="portfolio_single_content">
+                                                <img src="shoes.jpg" alt="title" />
+                                                <div>
+                                                    <a href="shoes shop.html">Shoes</a>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column Academics">
+                                            <div class="portfolio_single_content">
+                                                <img src="books.jpg" alt="title" />
+                                                <div>
+                                                    <a href="book1.html">Books Stores</a>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- End portfolio -->
+    <!--map-->
+    <div class="page-header-wrapper">
+        <div class="container">
+            <div class="containerx">
+                <h2 class="text1" style="margin-left: 140px; margin-top: 200px;">AVAILABLE AT YOUR LOCATION</h2>
+                <p class="text2 " style="margin-right: 50px;">We Provide Best Deals Around The Block Just For Your
+                    Comfort</p>
+            </div>
+
+        </div>
+    </div>
+    <section class="contact" id="contact">
+        <div id="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3437.175134961477!2d76.65758911512631!3d30.516086481713128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc32344a6e2d7%3A0x81b346dee91799ca!2sChitkara%20University!5e0!3m2!1sen!2sin!4v1642347620130!5m2!1sen!2sin"
+                width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <!--End Map-->
+        <!-- Begin social section -->
+        <section id="social-section">
+
+            <!-- Begin page header-->
+            <div class="page-header-wrapper">
+                <div class="container">
+                    <div class="containerx">
+                        <h2 class="text1" style="margin-left: 300px; margin-top: 200px;">OUR SOCIAL NETWORKS</h2>
+                        <p class="text2 " style="margin-left: 400px;">Follow Up,Sign Up & Stay Tuned</p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- End page header-->
+
+            <div class="container" style="margin-bottom: 200px;">
+                <ul class="social-list">
+                    <li> <a href="https://www.facebook.com/" class="rotate-box-1 square-icon  wow zoomIn" data-wow-delay="0.3s"><span
+                                class="rotate-box-icon"><i class="fa fa-facebook"></i></span></a></li>
+                    <li> <a href="https://twitter.com/" class="rotate-box-1 square-icon  wow zoomIn" data-wow-delay="0.4s"><span
+                                class="rotate-box-icon"><i class="fa fa-twitter"></i></span></a></li>
+                    <li> <a href="https://www.instagram.com/" class="rotate-box-1 square-icon  wow zoomIn" data-wow-delay="0.5s"><span
+                                class="rotate-box-icon"><i class="fa fa-instagram"></i></span></a></li>
+                    <li> <a href="https://www.youtube.com/" class="rotate-box-1 square-icon  wow zoomIn" data-wow-delay="0.6s"><span
+                                class="rotate-box-icon"><i class="fa fa-youtube"></i></span></a></li>
+
+                </ul>
+            </div>
+
+        </section>
+        <!-- End social section -->
+
+
+
+
+        <!-- Begin footer -->
+        <footer class="text-off-white">
+
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row wow bounceInLeft" data-wow-delay="0.4s">
+
+                        <div class="col-sm-6 col-md-4">
+                            <h4 style="color: rgb(0, 0, 0); text-shadow: rgba(192, 192, 192, 0.4) 2px 0px; font-size: 30px;">At
+                                The
+                                End We Have</h4>
+                            <ul class="imp-links">
+                                <li><a href="BACKUP-FILE U-SHOP (2).html#about-section"><i class="fas fa-id-badge"> </i> About</a></li>
+                                <li><a href="addshop.html"><i class="fas fa-user-plus"></i> Add Your Shop</a></li>
+                                <li><a href="ucontact.html"><i class="fas fa-blender-phone"> </i> Contact Us</a></li>
+                                
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <h4 style="color: rgb(0, 0, 0); text-shadow: rgba(192, 192, 192, 0.4) 2px 0px; font-size: 30px;">Be
+                                A
+                                Part Of Our Network</h4>
+                            <div id="footer_signup">
+                                <div id="email">
+                                    <form>
+                                        <input type="email" placeholder="Enter email address" name="email"
+                                            id="address" required>
+                                        <button type="submit" style="color:#25282a"
+                                            onclick="popup()">Submit</button>
+                                        <span id="result" class="section-description"></span>
+                                    </form>
+                                </div>
+                            </div>
+                            <p>We Will Provide You With Latest Update On Your Email,Be Sure To Check Out</p>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <h4 style="color: rgb(0, 0, 0); text-shadow: rgba(192, 192, 192, 0.4) 2px 0px; font-size: 30px;">Talk
+                                To Our ChatBot</h4>
+                            <li><a href="chatbot.html"><i class="fa fa-rocket fa-3x"></i></a></li>
+
+
+
+                            <p>Have Fun and Thank You For Visting U-Shop</p>
+
+
+
+
+
+
+
+
+                        </div> <!-- /.row -->
+                    </div> <!-- /.container -->
+                </div>
+
+
+        </footer>
+
+        <!--FOR UPSIDE DOWN BY NAVIGATION BAR-->
+        <script>
+            $(document).ready(function () {
+
+                $('[data-toggle="tooltip"]').tooltip();
+
+
+                $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+
+
+                    if (this.hash !== "") {
+
+
+                        event.preventDefault();
+
+
+                        var hash = this.hash;
+
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 900, function () {
+
+
+                            window.location.hash = hash;
+                        });
+                    } // End if
+                });
+            })
+
+
+
+            filterSelection("all") // Execute the function and show all columns
+            function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("column");
+                if (c == "all") c = "";
+
+                for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                }
+            }
+
+            // Show filtered elements
+            function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) {
+                        element.className += " " + arr2[i];
+                    }
+                }
+            }
+
+            // Hide elements that are not selected
+            function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                        arr1.splice(arr1.indexOf(arr2[i]), 1);
+                    }
+                }
+                element.className = arr1.join(" ");
+            }
+
+            // Add active class to the current button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+
+            function popup() {
+                alert("Welcome To U-shop\nThank You For Visiting Us, We Will Soon Try To Contact You");
+            }
+        </script>
+
+
+
+
+</body>
+
+</html>

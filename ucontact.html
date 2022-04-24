@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="ulogo.jpg">
+    <title>Ushop/Contact us</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <style>
+        body {
+            background: url(off.jpg);
+            padding: 0;
+            margin: 0;
+        }
+
+        .image {
+            position: relative;
+            float: right;
+            top: 240px;
+            right: 200px;
+            z-index: 1;
+
+        }
+
+        .image img {
+            width: 400px;
+        }
+
+        .banner {
+            position: relative;
+            float: left;
+            left: 260px;
+            top: 60px;
+
+        }
+
+        .banner1 {
+            position: relative;
+            float: left;
+            left: 420px;
+            top: 120px;
+
+
+
+
+
+        }
+
+        .banner1 img {
+            width: 400px;
+            height: auto;
+            border: 5px solid black;
+            box-shadow: 0 0 5px black,
+                0 0 5px black;
+
+        }
+
+        .slider {
+            position: absolute;
+            left: 20px;
+            float: left;
+            left: 230px;
+            top: 240px;
+            width: 200px;
+            height: 113px;
+            background: url(led2.png);
+            animation: slide 20s infinite;
+            border: 8px solid black;
+            box-shadow: 7px 7px 7px black;
+
+
+        }
+
+        @keyframes slide {
+            16.66 {
+                background: url(pp.png);
+            }
+
+            33.32% {
+                background: url(led5.jpg);
+
+
+            }
+
+            49.98% {
+                background: url(led5.jpg);
+            }
+
+            66.64% {
+                background: url(led1.jpg);
+            }
+
+            83.3% {
+                background: url(led3.jpg);
+            }
+
+            100% {
+                background: url(led4.jpg);
+            }
+
+        }
+
+        .banner2 {
+            background-image: url(add.png);
+            position: absolute;
+            width: 150px;
+            height: 185px;
+            float: left;
+            left: 1%;
+            top: 100px;
+            transform: rotatey(40deg);
+           
+
+
+
+
+
+
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <img src="https://static.wixstatic.com/media/359175_0594ff7951174dbcaf3f84e2bb3163c4~mv2.gif" alt="Workplace"
+            usemap="#workmap">
+
+        <map name="workmap">
+            <area shape="rect" coords="307,144,348,168" alt="Computer" href="#" title="Contact Number"
+                onclick='alert("Contact Number: 9990011111")'>
+            <area shape="poly" coords="245,103,292,117,294,169,239,168" alt="Laptop" href="#" title="Email Id."
+                onclick='alert("Email Address: ushop@gmail.com")'>
+            <area shape="rect" coords="62,82,81,95" alt="facebook" href="https://www.facebook.com/" title="Facebook">
+            <area shape="rect" coords="89,70,100,80" alt="twitter" title="Twitter"
+                href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D">
+            <area shape="rect" coords="101,57,116,68" alt="Google " title="Ushop Google Search"
+                href="BACKUP-FILE U-SHOP.html">
+            <area shape="rect" coords="52,138,65,150" alt="Youtube" title="Youtube" href="https://www.youtube.com/">
+            <area shape="rect" coords="113,125,131,143" alt="Linkdin" title="Linkdin Account"
+                href="https://www.linkedin.com/login">
+            <area shape="rect" coords="124,101,140,114" alt="whatsapp" title="Whatsapp"
+                onclick='alert("Whatsapp Number: 9990011111")'>
+            <area shape="rect" coords="115,72,132,86" alt="Sign in" title="Sign in" href="sing in.html">
+        </map>
+    </div>
+    <div class="banner">
+        <img src="banner.png">
+    </div>
+    <div class="banner1">
+        <img src="https://bzolutions.com/wp-content/uploads/2019/07/contactus.gif">
+    </div>
+    <a href="addshop.html" target="_blank">
+    <div class="banner2" onclick="location.href='addshop.html'"></div></a>
+    <div class="slider"></div>
+
+</body>
+
+</html>
